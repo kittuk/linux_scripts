@@ -1,6 +1,7 @@
 # Ask for the user password
 # Script only works if sudo caches the password for a few minutes
 sudo true
+echo "Enter Username for SUDOERS:"
 read NAME
 echo $NAME' ALL=(ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
 echo $NAME
