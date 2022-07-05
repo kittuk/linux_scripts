@@ -1,8 +1,9 @@
 # Ask for the user password
 # Script only works if sudo caches the password for a few minutes
 sudo true
-echo 'ktowning ALL=(ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
-echo 'kittuk ALL=(ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
+read NAME
+echo $NAME' ALL=(ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
+echo $NAME
 sudo true
 
 cd ~/
